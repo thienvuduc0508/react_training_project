@@ -1,2 +1,1 @@
-# react_savvycom
-react savvycom
+# react_training
