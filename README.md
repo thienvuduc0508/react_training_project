@@ -1,2 +1,2 @@
-# react_training_project
-Learn about reactjs and es6
+# react_savvycom
+react savvycom
