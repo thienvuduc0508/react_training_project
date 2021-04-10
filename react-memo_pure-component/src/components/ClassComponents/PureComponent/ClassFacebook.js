@@ -18,7 +18,7 @@ export default class ClassFacebook extends Component {
         return (
             <div>
                 <h1>Class FB</h1>
-                <Post />
+                <Post content= 'Nulla, consequatur aspernatur unde, velit similique quia exercitationem quisquam libero totam'/>
                 <Like likeCounter = {this.state.countLike} />
                 <button onClick={this.increLike}>Like</button>
             </div>

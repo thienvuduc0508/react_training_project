@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Post = () => {
+const Post = (props) => {
     console.log('render Post using React memo');
     return (
         <div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellat maxime deleniti. Temporibus sit sequi fugiat quod dolor earum excepturi numquam repellat maiores odio aliquam deserunt, sunt quaerat. Consequuntur, expedita?</p>
+            <p>{props.content}</p>
         </div>
     )
 }

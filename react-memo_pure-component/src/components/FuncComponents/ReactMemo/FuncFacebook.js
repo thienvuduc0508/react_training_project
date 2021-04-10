@@ -10,7 +10,7 @@ const FuncFacebook = (props) => {
     return ( 
         <div>
             <h1>Function FB</h1>
-            <Post />
+            <Post content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima repellat maxime deleniti...."/>
             <Like likeNumber = {likeCounter}/>
             <button onClick={increaLike}>Like</button>
         </div>
