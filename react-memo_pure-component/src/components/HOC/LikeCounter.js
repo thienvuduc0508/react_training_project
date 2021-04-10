@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import withCount from './HOC'
-
+import PropTypes from 'prop-types'
 class LikeCounter extends Component {
     render() {
         return (
@@ -11,5 +11,9 @@ class LikeCounter extends Component {
         )
     }
 }
-const EnhancedLikeCounter = withCount(LikeCounter, 0)
+LikeCounter.propTypes = {
+    countNumber: PropTypes.number,
+    handleClick: PropTypes.func
+}
+const EnhancedLikeCounter = withCount(LikeCounter, 1)
 export default EnhancedLikeCounter;

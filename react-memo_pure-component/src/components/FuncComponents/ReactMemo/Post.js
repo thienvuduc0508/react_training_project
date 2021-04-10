@@ -1,4 +1,6 @@
 import React from 'react'
+import PropTypes from 'prop-types'
+
 
 const Post = (props) => {
     console.log('render Post using React memo');
@@ -7,6 +9,10 @@ const Post = (props) => {
             <p>{props.content}</p>
         </div>
     )
+}
+
+Post.propTypes = {
+    content: PropTypes.string,
 }
 
 // using React.memo

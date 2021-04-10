@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import withCount from './HOC'
-
+import PropTypes from 'prop-types'
  class CommentCounter extends Component {
     render() {
         return (
@@ -11,6 +11,9 @@ import withCount from './HOC'
         )
     }
 }
-
+CommentCounter.propTypes = {
+    countNumber: PropTypes.number,
+    handleClick: PropTypes.func
+}
 const EnhancedCommentCounter = withCount(CommentCounter,1)
 export default EnhancedCommentCounter;

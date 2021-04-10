@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Like = (props) => {
     console.log('Like render in FuncFaceBook');
@@ -8,5 +9,7 @@ const Like = (props) => {
         </div>
     )
 }
-
+Like.propTypes = {
+    likeNumber: PropTypes.number,
+}
 export default Like
