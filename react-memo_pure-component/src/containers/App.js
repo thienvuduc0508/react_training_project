@@ -9,13 +9,13 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* <ClassFacebook />
-      <FuncFacebook /> */}
+      {/* <ClassFacebook /> */}
+      <FuncFacebook />
 
       {/* <EnhancedCommentCounter />
       <EnhancedLikeCounter /> */}
-      <FormInput />
-      <Counter />
+      {/* <FormInput />
+      <Counter /> */}
     </div>
   );
 }
