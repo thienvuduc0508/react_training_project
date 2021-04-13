@@ -1,0 +1,22 @@
+.BoardMenu{
+    display: flex;
+    align-items: center;
+    background-color: #E2B57C;
+    width: 30%;
+    margin: 0 auto;
+    flex-flow: column;
+    height: 350px;
+    span{
+        font-size: 1rem;
+        font-weight: 600;
+        margin: 10px 0;
+    }
+}
+.btnOrder{
+    background-color: #DAD835;
+    cursor: pointer;
+    outline: none;
+    color: #B59B1E;
+    padding: 10px 15px;
+    margin: 20px auto
+}

@@ -70,7 +70,7 @@
 .cheese {
   @include bread(83%, 2%, linear-gradient(#f1cd07, #dbc036), 10px);
 }
-.meet {
+.meat {
   @include bread(70%, 5%, linear-gradient(#7c2903, #723005), 20px);
 }
 .breadBottom {

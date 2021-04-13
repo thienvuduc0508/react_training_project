@@ -1,0 +1,37 @@
+.BMIgredients {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.BMIgredients .label {
+  width: 80px;
+  padding: 10px;
+  font-weight: 800;
+}
+
+.BMIgredients button {
+  display: block;
+  width: 80px;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.BMIgredients .btnLess {
+  background-color: #D39A52;
+  color: #fff;
+}
+
+.BMIgredients .btnMore {
+  background-color: #8F5E1E;
+  color: #fff;
+}
+/*# sourceMappingURL=BMIngredients.module.css.map */
