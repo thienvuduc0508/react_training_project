@@ -1,44 +1,37 @@
-import React, { Component } from 'react'
-import classes from './ingredients.css'
+import React from 'react'
+import classes from './ingredients.module.css'
 
-class Ingredients extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            salad: 1,
-            cheese: 2,
-            bacon: 1,
-            meat: 2
-        }
+const Ingredients = ({ type}) => {
+    let ingredients = null;
+    switch(type){
+        case 'breadTop':
+            ingredients = (<div className={classes.breadTop}>
+                <div className={classes.seed}></div>
+                <div className={classes.seed2}></div>
+            </div>)
+            break;
+        case 'breadBottom':
+            ingredients = <div className={classes.breadBottom}></div>
+            break;
+            case 'salad':
+            ingredients = <div className={classes.salad}></div>   
+            break;
+            case 'cheese':
+            ingredients = <div className={classes.cheese}></div>   
+            break;
+            case 'bacon':
+            ingredients = <div className={classes.bacon}></div>   
+            break;
+            case 'meat':
+            ingredients = <div className={classes.meat}></div>   
+            break;
+            default :
+            ingredients = null;
     }
-    burgerIngredients =() => {
-        let {salad, cheese, bacon, meat } = this.state;
-        let burgerIngred = [];
-        for(let i = 0; i < salad; i++){
-            burgerIngred.push(<div key={burgerIngred.length} className='salad'></div>)
-        }
-        for(let i = 0; i < cheese; i++){
-            burgerIngred.push(<div key={burgerIngred.length} className='cheese'></div>)
-        }
-        for(let i = 0; i < bacon; i++){
-            burgerIngred.push(<div key={burgerIngred.length} className='bacon'></div>)
-        }
-        for(let i = 0; i < meat; i++){
-            burgerIngred.push(<div key={burgerIngred.length} className='meat'></div>)
-        }
-        if(burgerIngred.length === 0){
-            burgerIngred.push(<p key={burgerIngred.length}>Please adding ingredients!</p>)
-        }
-        return burgerIngred;
-    }
-    render(){   
     return (
-        <div>
-            <div className={classes['bread-top']}></div>
-            {this.burgerIngredients}
-        </div>
-        )
-}
+        ingredients
+    )
 }
 
-export default Ingredients;
+export default Ingredients
+

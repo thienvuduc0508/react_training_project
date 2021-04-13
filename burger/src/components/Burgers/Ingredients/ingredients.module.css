@@ -1,22 +1,16 @@
-.bread {
-  width: 500px;
-  height: 450px;
-  margin: 10px auto;
-}
-
-.bread-top {
+.breadTop {
   width: 70%;
   height: 20%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#BF5B21), to(#DF7834));
-  background: linear-gradient(#BF5B21, #DF7834);
+  background: -webkit-gradient(linear, left top, left bottom, from(#bf5b21), to(#df7834));
+  background: linear-gradient(#bf5b21, #df7834);
   border-radius: 50% 50% 0 0;
   margin: 2% auto;
-  -webkit-box-shadow: inset -15px 0 #C15710;
-          box-shadow: inset -15px 0 #C15710;
+  -webkit-box-shadow: inset -15px 0 #c15710;
+          box-shadow: inset -15px 0 #c15710;
   position: relative;
 }
 
-.bread-top .seed {
+.breadTop .seed {
   position: absolute;
   background-color: #fff;
   border-radius: 40%;
@@ -30,8 +24,8 @@
           box-shadow: inset -2px -3px #c9c9c9;
 }
 
-.bread-top .seed:after {
-  content: '';
+.breadTop .seed:after {
+  content: "";
   position: absolute;
   background-color: #fff;
   border-radius: 40%;
@@ -45,8 +39,8 @@
           box-shadow: inset -1px 2px #c9c9c9;
 }
 
-.bread-top .seed:before {
-  content: '';
+.breadTop .seed:before {
+  content: "";
   position: absolute;
   background-color: #fff;
   border-radius: 40%;
@@ -60,7 +54,7 @@
           box-shadow: inset -1px -3px #c9c9c9;
 }
 
-.bread-top .seed-2 {
+.breadTop .seed2 {
   position: absolute;
   background-color: #fff;
   border-radius: 40%;
@@ -74,8 +68,8 @@
           box-shadow: inset -3px 0 #c9c9c9;
 }
 
-.bread-top .seed-2:after {
-  content: '';
+.breadTop .seed2:after {
+  content: "";
   position: absolute;
   background-color: #fff;
   border-radius: 40%;
@@ -89,49 +83,49 @@
           box-shadow: inset 1px 3px #c9c9c9;
 }
 
-.bread .salad {
+.salad {
   width: 80%;
   height: 3%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#329427), to(#82C648));
-  background: linear-gradient(#329427, #82C648);
+  background: -webkit-gradient(linear, left top, left bottom, from(#329427), to(#82c648));
+  background: linear-gradient(#329427, #82c648);
   border-radius: 10px;
   margin: 2% auto;
 }
 
-.bread .bacon {
+.bacon {
   width: 70%;
   height: 2%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#C63E23), to(#C3552F));
-  background: linear-gradient(#C63E23, #C3552F);
+  background: -webkit-gradient(linear, left top, left bottom, from(#c63e23), to(#c3552f));
+  background: linear-gradient(#c63e23, #c3552f);
   border-radius: none;
   margin: 2% auto;
 }
 
-.bread .cheese {
+.cheese {
   width: 83%;
   height: 2%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#F1CD07), to(#DBC036));
-  background: linear-gradient(#F1CD07, #DBC036);
+  background: -webkit-gradient(linear, left top, left bottom, from(#f1cd07), to(#dbc036));
+  background: linear-gradient(#f1cd07, #dbc036);
   border-radius: 10px;
   margin: 2% auto;
 }
 
-.bread .meet {
+.meet {
   width: 70%;
   height: 5%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#7C2903), to(#723005));
-  background: linear-gradient(#7C2903, #723005);
+  background: -webkit-gradient(linear, left top, left bottom, from(#7c2903), to(#723005));
+  background: linear-gradient(#7c2903, #723005);
   border-radius: 20px;
   margin: 2% auto;
 }
 
-.bread-bottom {
+.breadBottom {
   width: 70%;
   height: 15%;
-  background: #E47D38;
+  background: #e47d38;
   border-radius: 0 0 30px 30px;
   margin: 2% auto;
-  -webkit-box-shadow: inset -15px 0 #C15710;
-          box-shadow: inset -15px 0 #C15710;
+  -webkit-box-shadow: inset -15px 0 #c15710;
+          box-shadow: inset -15px 0 #c15710;
 }
-/*# sourceMappingURL=ingredients.css.map */
+/*# sourceMappingURL=ingredients.module.css.map */

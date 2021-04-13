@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,OAAO,CAAA;EACH,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,MAAM;EAClB,MAAM,EAAE,SAAS;CACpB",
+    "sources": [
+        "Burger.module.scss"
+    ],
+    "names": [],
+    "file": "Burger.module.css"
+}
