@@ -1,6 +1,9 @@
 import React from 'react'
 import Ingredients from './Ingredients/Ingredients'
 import classes from './Burger.module.css'
+import PropTypes from 'prop-types'
+
+
 const Burger = (props) => {
          let ingredients = Object.keys(props.ingredients) // ["salad", "cheese", "bacon", "meet"]
          .map((igkey) => {
@@ -24,6 +27,9 @@ const Burger = (props) => {
                       <Ingredients type="breadBottom" />
                     </div>
                   )
+}
+Burger.propTypes = {
+  ingredients: PropTypes.object.isRequired,
 }
 
 export default Burger

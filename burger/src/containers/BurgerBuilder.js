@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import BoardMenu from '../components/BoardMenu/BoardMenu'
+import Modal from '../components/Modal/Modal'
+import Content from '../components/Modal/ModalContent/Content'
 import Burger from './../components/Burgers/Burger'
 export default class BurgerBuilder extends Component {
     constructor(props){
@@ -11,7 +13,8 @@ export default class BurgerBuilder extends Component {
                     bacon: 1,
                     meat: 1
                 },
-                totalPrice: 5
+                totalPrice: 10,
+                purchasing: false
 
             }
             
@@ -57,15 +60,29 @@ export default class BurgerBuilder extends Component {
           totalPrice: newPrice
         })
     }
+    showOrder= () => {
+        this.setState({
+            purchasing: true
+        })
+    }
+    cancelPurchase= () => {
+        this.setState({
+            purchasing: false
+        })
+    }
     render() {
         return (
-            <div>
+            <>
                 <Burger ingredients = {this.state.ingredients} />
                 <BoardMenu addIngredient={this.addIngredient} 
-                lessIngredients={this.lessIngredient}
+                lessIngredient={this.lessIngredient}
                 price={this.state.totalPrice}
+                order = {this.showOrder}
                 />
-            </div>
+                <Modal show = {this.state.purchasing} close={this.cancelPurchase}>
+                    <Content totalPrice={this.state.totalPrice} ingredients={this.state.ingredients} btnClick={this.cancelPurchase} />
+                </Modal>
+            </>
         )
     }
 }

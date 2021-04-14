@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './BMIngredients.module.css'
+import PropTypes from 'prop-types'
 const BMIgredients = (props) => {
     return (
         <div className={classes.BMIgredients}>
@@ -13,5 +14,9 @@ const BMIgredients = (props) => {
         </div>
     )
 }
-
+BMIgredients.propTypes = {
+    label: PropTypes.string.isRequired,
+    less: PropTypes.func.isRequired,
+    add: PropTypes.func.isRequired
+}
 export default BMIgredients
