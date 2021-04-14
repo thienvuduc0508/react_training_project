@@ -9,4 +9,18 @@
 .Burger:-webkit-scrollbar {
   display: none;
 }
+
+@media screen and (max-width: 480px) {
+  .Burger {
+    width: 250px;
+    height: 190px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Burger {
+    width: 150px;
+    height: 140px;
+  }
+}
 /*# sourceMappingURL=Burger.module.css.map */

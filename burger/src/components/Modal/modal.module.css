@@ -12,4 +12,36 @@
   transition: all 0.3s ease-out;
   left: 32%;
 }
+
+@media screen and (max-width: 1024px) {
+  .Modal {
+    width: 650px;
+    top: 35%;
+    left: 18%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Modal {
+    width: 500px;
+    top: 35%;
+    left: 18%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Modal {
+    width: 80%;
+    top: 28%;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .Modal {
+    width: 250px;
+    top: 28%;
+    left: 12%;
+  }
+}
 /*# sourceMappingURL=modal.module.css.map */

@@ -12,3 +12,15 @@
         color: #7EA93B
     }
 }
+
+@media screen and (max-width: 480px){
+    .content{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .content{
+        font-size: 14px;
+    }
+}

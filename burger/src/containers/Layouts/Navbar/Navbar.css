@@ -34,4 +34,30 @@
   list-style: none;
   margin: 0 20px;
 }
+
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 10px 5px;
+  }
+  .navbarLogo img {
+    width: 40px;
+  }
+  .navbar .navbar-item li {
+    margin: 0 8px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .navbar {
+    padding: 10px 5px;
+  }
+  .navbarLogo img {
+    width: 40px;
+  }
+  .navbar .navbar-item li {
+    margin: 0 5px;
+    font-size: 15px;
+  }
+}
 /*# sourceMappingURL=Navbar.css.map */

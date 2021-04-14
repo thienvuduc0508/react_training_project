@@ -29,4 +29,36 @@
   padding: 10px 15px;
   margin: 20px auto;
 }
+
+@media screen and (max-width: 1024px) {
+  .BoardMenu {
+    width: 600px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .BoardMenu {
+    width: 450px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .BoardMenu {
+    width: 300px;
+    height: 370px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .BoardMenu {
+    width: 220px;
+    height: 300px;
+  }
+  .btnOrder {
+    padding: 8px 8px;
+    margin: 10px auto;
+  }
+}
 /*# sourceMappingURL=BoardMenu.module.css.map */

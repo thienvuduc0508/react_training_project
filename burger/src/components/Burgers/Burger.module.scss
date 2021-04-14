@@ -8,3 +8,23 @@
         display:none;
     }
 }
+
+@media screen and (max-width: 1024px){
+    
+}
+@media screen and (max-width: 768px){
+    
+}
+@media screen and (max-width: 480px){
+    .Burger{
+        width: 250px;
+        height: 190px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .Burger{
+        width: 150px;
+        height: 140px;
+    }
+}

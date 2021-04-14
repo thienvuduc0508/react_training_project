@@ -34,4 +34,17 @@
   background-color: #8F5E1E;
   color: #fff;
 }
+
+@media screen and (max-width: 320px) {
+  .BMIgredients .label {
+    width: 40px;
+    padding: 15px;
+    font-weight: 500;
+  }
+  .BMIgredients button {
+    width: 55px;
+    padding: 10px;
+    margin: 0 5px;
+  }
+}
 /*# sourceMappingURL=BMIngredients.module.css.map */

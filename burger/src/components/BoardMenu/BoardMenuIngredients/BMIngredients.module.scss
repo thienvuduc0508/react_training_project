@@ -26,7 +26,23 @@
         color: #fff;
     }
 
+}
 
 
-
+@media screen and (max-width: 320px){
+    .BMIgredients{      
+        .label{
+            width: 40px;
+            padding: 15px;
+            font-weight: 500;
+        }
+        button {
+            width: 55px;
+            padding: 10px;
+            margin: 0 5px;
+        }
+        
+        
+    
+    }
 }
