@@ -5,7 +5,7 @@ import Modal from '../components/Modal/Modal';
 import Content from '../components/Modal/Content/Content'
 
 const Burgers = () => {
-const [burgerElements, setBurgerElement] = useState({
+const [burgerElements, setBurgerElements] = useState({
     salad: 1,
     cheese: 1,
     bacon: 1,
@@ -40,7 +40,7 @@ const addElementToBurger = (type) => {
     const oldTotalPrice = totalPrice;
     const priceAdded = burgerElementPrice[type];
     const newTotalPrice = oldTotalPrice+priceAdded;
-    setBurgerElement(newBurgerElements);
+    setBurgerElements(newBurgerElements);
     setTotalPrice(newTotalPrice);
 }
 const removeElementFromBurger = (type) => {
@@ -56,7 +56,7 @@ const removeElementFromBurger = (type) => {
     const oldTotalPrice = totalPrice;
     const priceRemoved = burgerElementPrice[type];
     const newTotalPrice = oldTotalPrice - priceRemoved;
-    setBurgerElement(newBurgerElements);
+    setBurgerElements(newBurgerElements);
     setTotalPrice(newTotalPrice);
 }
     return (
