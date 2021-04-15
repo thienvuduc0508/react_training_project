@@ -27,3 +27,32 @@
     transform: translateY(100vh);
     opacity: 0;
   }
+  @media screen and (max-width: 1024px){
+    .showModal{
+        width: 650px;
+        top: 35%;
+        left: 18%;
+    }
+}
+@media screen and (max-width: 768px){
+    .showModal{
+        width: 500px;
+        top: 35%;
+        left: 18%;
+    }
+}
+@media screen and (max-width: 480px){
+    .showModal{
+        width: 80%;
+        top: 28%;
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .showModal{
+        width: 250px;
+        top: 28%;
+        left: 12%;
+    }
+}

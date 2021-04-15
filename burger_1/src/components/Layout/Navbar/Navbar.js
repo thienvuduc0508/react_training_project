@@ -1,12 +1,13 @@
 import React from 'react'
-import classes from './navbar.module.css'
-import logo from './../../../assets/img/logo.png'
+import classes from './navbar.module.scss'
+
+
 const Navbar = (props) => {
     return (
         <>
         <div className={classes.navbar}>
             <div className={classes.navbarLogo}>
-                <img src={logo} alt="logo"/>
+                <img src={require('./../../../assets/img/logo.png').default} alt="logo"/>
             </div>
             <div className={classes.navbarItem}>
                 <li>Burger Builder</li>

@@ -1,4 +1,4 @@
-import classes from './backdrop.module.css'
+import classes from './backdrop.module.scss'
 import React from 'react'
 
 const BackDrop = ({showBackdrop, clicked }) => {

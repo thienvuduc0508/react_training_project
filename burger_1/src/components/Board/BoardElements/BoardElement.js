@@ -1,4 +1,4 @@
-import classes from './boardElement.module.css'
+import classes from './boardElement.module.scss'
 import React from 'react'
 
 const BoardElement = ({label, add, remove}) => {

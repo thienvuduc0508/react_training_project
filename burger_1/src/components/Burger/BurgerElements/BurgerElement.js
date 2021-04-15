@@ -1,4 +1,4 @@
-import classes from './burgerElement.module.css';
+import classes from './burgerElement.module.scss';
 import React from 'react'
 
 const BurgerElement = ({type}) => {

@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,OAAO,CAAA;EACH,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,MAAM;EAClB,MAAM,EAAE,SAAS;EACjB,QAAQ,EAAE,MAAM;CAInB;;AATD,AAMI,OANG,AAMF,kBAAkB,CAAC;EAChB,OAAO,EAAC,IAAI;CACf",
-    "sources": [
-        "burger.module.scss"
-    ],
-    "names": [],
-    "file": "burger.module.css"
-}

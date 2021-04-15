@@ -27,3 +27,19 @@
     }
 
 }
+
+@media screen and (max-width: 320px){
+    .BoardElement{
+        .label{
+            width: 30px;
+            padding-right: 22px;
+            font-weight: 500;
+            
+        }
+        button {
+            width: 55px;
+            padding: 10px;
+            margin: 0 5px;
+            }
+    }
+}

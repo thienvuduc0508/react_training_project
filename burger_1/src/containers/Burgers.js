@@ -5,16 +5,17 @@ import Modal from '../components/Modal/Modal';
 import Content from '../components/Modal/Content/Content'
 
 const Burgers = () => {
+    
+ const TOTALPRICE_DEFAULT = 5;
+ const NUMBER_DEFAULT = 0;   
 const [burgerElements, setBurgerElements] = useState({
-    salad: 1,
-    cheese: 1,
-    bacon: 1,
-    meat: 1
+    salad: NUMBER_DEFAULT,
+    cheese: NUMBER_DEFAULT,
+    bacon: NUMBER_DEFAULT,
+    meat: NUMBER_DEFAULT
 });
-const [totalPrice, setTotalPrice] = useState(5);
+const [totalPrice, setTotalPrice] = useState(TOTALPRICE_DEFAULT);
 const [purchase, setPurchase] = useState(false)
-
-
 
 const burgerElementPrice={
     salad: 0.5,
@@ -22,8 +23,6 @@ const burgerElementPrice={
     bacon: 1.2,
     meat: 1.5
 };
-
-
 const showModal= () => {
     setPurchase(true)
 }
@@ -69,5 +68,4 @@ const removeElementFromBurger = (type) => {
         </>
     )
 }
-
 export default Burgers

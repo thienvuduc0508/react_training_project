@@ -1,6 +1,6 @@
 import React from 'react'
 import BackDrop from './BackDrop/BackDrop'
-import classes from './modal.module.css'
+import classes from './modal.module.scss'
 
 const Modal = (props) => {
     return (
@@ -11,7 +11,5 @@ const Modal = (props) => {
         </div>
         </>
     )
-    
 }
-
 export default Modal

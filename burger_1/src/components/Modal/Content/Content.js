@@ -1,5 +1,5 @@
 import React from 'react'
-import classes from './content.module.css'
+import classes from './content.module.scss'
 
 
 const Content = ({ burgerElements, totalPrice, btnClick }) => {
