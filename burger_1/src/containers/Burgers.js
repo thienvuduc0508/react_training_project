@@ -64,7 +64,7 @@ const removeElementFromBurger = (type) => {
             <Burger burgerElements={burgerElements} />
             <Board totalPrice={totalPrice} showModal={showModal} addBurgerElement={addElementToBurger} removeBurgerElement={removeElementFromBurger}/>
             <Modal show={purchase} close={closeModal}>
-                <Content burgerElements={burgerElements} totalPrice={totalPrice}/>
+                <Content burgerElements={burgerElements} totalPrice={totalPrice} btnClick={closeModal}/>
             </Modal>
         </>
     )
