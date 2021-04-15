@@ -1,0 +1,29 @@
+.showModal{
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    width: 35%;
+    border: 1px solid #ccc;
+    padding: 16px;
+    top: 30%;
+    box-sizing: border-box;
+    transition: all 0.3s ease-out;
+    left: 32%;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  
+  .hideModal{
+    position: fixed;
+    z-index: 10;
+    background-color: white;
+    width: 35%;
+    border: 1px solid #ccc;
+    padding: 16px;
+    top: 30%;
+    box-sizing: border-box;
+    left: 32%;
+    transition: all 0.3s ease-out;
+    transform: translateY(100vh);
+    opacity: 0;
+  }

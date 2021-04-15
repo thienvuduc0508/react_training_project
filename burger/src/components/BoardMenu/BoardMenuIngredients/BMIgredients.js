@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './BMIngredients.module.css'
 import PropTypes from 'prop-types'
 const BMIgredients = (props) => {
+    
     return (
         <div className={classes.BMIgredients}>
             <div className={classes.label}>{props.label}</div>

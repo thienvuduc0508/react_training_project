@@ -1,0 +1,10 @@
+.Burger{
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    margin: 10px auto;
+    overflow: hidden;
+    &:-webkit-scrollbar {
+        display:none;
+    }
+}

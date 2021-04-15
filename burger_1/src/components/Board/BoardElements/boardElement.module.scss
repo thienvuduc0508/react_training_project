@@ -1,0 +1,29 @@
+.BoardElement{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .label{
+        width: 80px;
+        padding: 10px;
+        font-weight: 800;
+    }
+    button {
+        display: block;
+        width: 80px;
+        padding: 5px;
+        margin: 0 5px;
+        cursor: pointer;
+        outline: none;
+    }
+    .btnLess{
+        background-color: #D39A52;
+        color: #fff;
+
+    }
+    .btnMore{
+        background-color: #8F5E1E;
+        color: #fff;
+    }
+
+}

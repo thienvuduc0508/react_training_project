@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './ingredients.module.css'
 import PropTypes from 'prop-types'
 
-const Ingredients = ({ type}) => {
+const Ingredients = ({type}) => {
     let ingredients = null;
     switch(type){
         case 'breadTop':

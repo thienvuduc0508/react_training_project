@@ -1,0 +1,12 @@
+.Burger {
+  width: 350px;
+  height: 350px;
+  text-align: center;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.Burger:-webkit-scrollbar {
+  display: none;
+}
+/*# sourceMappingURL=burger.module.css.map */

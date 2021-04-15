@@ -5,11 +5,11 @@
   width: 35%;
   border: 1px solid #ccc;
   padding: 16px;
-  top: 30%;
+  top: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   left: 32%;
 }
 

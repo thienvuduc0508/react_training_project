@@ -15,9 +15,7 @@ export default class BurgerBuilder extends Component {
                 },
                 totalPrice: 10,
                 purchasing: false
-
-            }
-            
+            }            
     }
     ingredientPrice = {
         salad: 1,
@@ -73,13 +71,13 @@ export default class BurgerBuilder extends Component {
     render() {
         return (
             <>
-                <Burger ingredients = {this.state.ingredients} />
+                <Burger ingredients={this.state.ingredients} />
                 <BoardMenu addIngredient={this.addIngredient} 
                 lessIngredient={this.lessIngredient}
                 price={this.state.totalPrice}
-                order = {this.showOrder}
+                order={this.showOrder}
                 />
-                <Modal show = {this.state.purchasing} close={this.cancelPurchase}>
+                <Modal show={this.state.purchasing} close={this.cancelPurchase}>
                     <Content totalPrice={this.state.totalPrice} ingredients={this.state.ingredients} btnClick={this.cancelPurchase} />
                 </Modal>
             </>

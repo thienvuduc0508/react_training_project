@@ -1,0 +1,79 @@
+@mixin bread($width, $height, $background, $borderRadius, $margin: 2% auto) {
+    width: $width;
+    height: $height;
+    background: $background;
+    border-radius: $borderRadius;
+    margin: $margin;
+  }
+  @mixin seed($width, $height, $top, $left, $transform, $boxShadow) {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 40%;
+    width: $width;
+    height: $height;
+    top: $top;
+    left: $left;
+    transform: $transform;
+    box-shadow: $boxShadow;
+  }
+  
+  .breadTop {
+    @include bread(70%, 20%, linear-gradient(#bf5b21, #df7834), 50% 50% 0 0);
+    box-shadow: inset -15px 0 #c15710;
+    position: relative;
+    .seed {
+      @include seed(10%, 15%, 50%, 30%, rotate(-20deg), inset -2px -3px #c9c9c9);
+      &:after {
+        content: "";
+        @include seed(
+          100%,
+          100%,
+          -260%,
+          -170%,
+          rotate(60deg),
+          inset -1px 2px #c9c9c9
+        );
+      }
+      &:before {
+        content: "";
+        @include seed(
+          100%,
+          100%,
+          -50%,
+          180%,
+          rotate(60deg),
+          inset -1px -3px #c9c9c9
+        );
+      }
+    }
+    .seed2 {
+      @include seed(10%, 15%, 50%, 64%, rotate(20deg), inset -3px 0 #c9c9c9);
+      &:after {
+        content: "";
+        @include seed(
+          100%,
+          100%,
+          -250%,
+          180%,
+          rotate(90deg),
+          inset 1px 3px #c9c9c9
+        );
+      }
+    }
+  }
+  .salad {
+    @include bread(80%, 3%, linear-gradient(#329427, #82c648), 10px);
+  }
+  .bacon {
+    @include bread(70%, 2%, linear-gradient(#c63e23, #c3552f), none);
+  }
+  .cheese {
+    @include bread(83%, 2%, linear-gradient(#f1cd07, #dbc036), 10px);
+  }
+  .meat {
+    @include bread(70%, 5%, linear-gradient(#7c2903, #723005), 20px);
+  }
+  .breadBottom {
+    @include bread(70%, 15%, #e47d38, 0 0 30px 30px);
+    box-shadow: inset -15px 0 #c15710;
+  }
