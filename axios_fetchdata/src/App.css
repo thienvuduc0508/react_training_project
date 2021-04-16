@@ -1,0 +1,42 @@
+.App{
+  font-family: Verdana, Geneva, sans-serif;
+  background-color:#F6F6EF;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  font-size: 14px;
+  color: #828282;
+}
+.title{
+  margin: 10px 0;
+}
+.small{
+  font-size: 14px;
+  color: #828282;
+}
+.form-input{
+  width: 100%;
+  height: 70px;
+  background-color: #FF742B;
+  display: flex;
+  align-items: center;
+
+
+}
+input {
+  width: 50%;
+  padding: 10px 10px;
+  outline: none;
+  margin-left: 20%;
+}
+.search{
+  padding: 10px;
+  cursor: pointer;
+}
