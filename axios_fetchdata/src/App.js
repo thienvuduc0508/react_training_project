@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios(url);
+      const result = await axios.get(url);
       setData(result.data);
     };
     fetchData();
@@ -22,7 +22,6 @@ function App() {
   const handleClickSearch = () => {
     setUrl(`${URI_DEFAULT}${query}`)
   }
-
   return (
     <div className="App">
       <div className='form-input'>
