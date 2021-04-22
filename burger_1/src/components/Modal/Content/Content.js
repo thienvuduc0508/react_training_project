@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './content.module.scss'
 
 
-const Content = ({ burgerElements, totalPrice, btnClick }) => {
+const Content = ({ burgerElements, totalPrice, cancelClick, continueClick }) => {
     const burgerElement = Object.keys(burgerElements).map( element => {
        return <li key={element}>
             <span>{element} : {burgerElements[element]}</span>
@@ -15,8 +15,8 @@ const Content = ({ burgerElements, totalPrice, btnClick }) => {
         <ul>{burgerElement}</ul>
         <h5>Total Price: ${totalPrice.toFixed(2)}</h5>
         <p>Continue to Checkout?</p>
-        <button className={classes.btnCancel} onClick={btnClick}>Cancel</button>
-        <button className={classes.btnContinue}>Continue</button>
+        <button className={classes.btnCancel} onClick={cancelClick}>Cancel</button>
+        <button className={classes.btnContinue} onClick={continueClick}>Continue</button>
     </div>
     )
 }
