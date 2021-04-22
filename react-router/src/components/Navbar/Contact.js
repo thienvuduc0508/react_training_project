@@ -1,11 +1,12 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import Layout from '../Layout/Layout'
 
-const Contact = () => {
+const Contact = (props) => {
     return (
         <div>
             <Layout>
-           this is Contact page
+                <p>Contact us</p>
             </Layout>
         </div>
     )

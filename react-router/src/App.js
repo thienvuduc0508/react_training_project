@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Contact from './components/Navbar/Contact';
-import About from './components/Navbar/About';
+import About from './components/Navbar/About/About';
 import Login from './components/Login/Login';
 import Users from './components/Navbar/Users';
 import User from './components/User/User';
