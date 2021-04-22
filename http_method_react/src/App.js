@@ -1,6 +1,5 @@
 import './App.css';
-import PostList from './Posts/PostList';
-
+import PostList from './Components/Posts/PostList'
 function App() {
   return (
     <div className="App">
