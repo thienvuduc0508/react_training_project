@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 const Login = ({history}) => {
     const handleLogin = () => {
         alert('You are logged in');
-        history.push('/home')
+        history.push('/users')
     }
     return (
         <div>
