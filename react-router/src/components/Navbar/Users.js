@@ -23,9 +23,9 @@ const Users = (props) => {
      if (error) {
          return <p>Oops, something went wrong...</p>
      }
-     if (loading) {
-         return <p>Loading...</p>
-     }
+    //  if (loading) {
+    //      return <p>Loading...</p>
+    //  }
     //  const clickUser = (id) =>{
     //      props.history.push('/users/' + id)
     //  }
