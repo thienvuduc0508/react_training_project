@@ -1,0 +1,6 @@
+.about-item{
+    max-width: 20%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+}

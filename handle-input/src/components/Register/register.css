@@ -1,0 +1,51 @@
+.Register-form{
+    width: 40%;
+    margin: 20px auto;
+    border: solid 1px #333;
+}
+.form-control{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+}
+.form-control input{
+    width: 70%;
+    height: 30px;
+    border-radius: 10px;
+    outline: none;
+    border: solid 0.5px #333;
+}
+.form-select{
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.form-select label{
+    margin-left: 48px;
+    margin-right: 120px;
+}
+.form-select select{
+    border-radius: 10px;
+    padding: 7px;
+    outline: none;
+}
+.form-radio{    
+    margin-bottom: 20px;
+    display: block;
+    text-align: left;
+}
+.form-radio label{
+    margin-left: 48px;
+    margin-right: 103px;
+}
+.btnSubmit{
+    padding: 20px;
+}
+.btnSubmit input{
+    padding: 10px 30px;
+}
+.form-checkbox{
+    text-align: left;
+    margin-left: 192px;
+}
