@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import classes from './navbar.module.scss'
 
 
@@ -10,8 +11,8 @@ const Navbar = (props) => {
                 <img src={require('./../../../assets/img/logo.png').default} alt="logo"/>
             </div>
             <div className={classes.navbarItem}>
-                <li>Burger Builder</li>
-                <li>Checkout</li>
+                <NavLink className={classes.navLink} activeClassName="selected" to='/'>Burger Builder</NavLink>
+                <NavLink className={classes.navLink} activeClassName="selected" to='/checkout'>Checkout</NavLink>
             </div>
         </div>
         </>

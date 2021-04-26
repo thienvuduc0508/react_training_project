@@ -6,7 +6,7 @@ import Content from '../components/Modal/Content/Content';
 import axios from '../axios';
 import Spinner from '../components/Spinner/Spinner';
 
-const Burgers = () => {
+const Burgers = (props) => {
     
  const TOTALPRICE_DEFAULT = 5;
 const [burgerElements, setBurgerElements] = useState(null);
@@ -34,19 +34,20 @@ const closeModal= () =>{
     setPurchase(false)
 }
 const continueOrder = () => {
-    setLoading(true);
-    const data = {
-        burgerElements, totalPrice
-    }
-    axios.post('/orders.json', data).then((res)=> {
-        setLoading(false);
-        setPurchase(false);        
-        console.log(res)
-    }).catch(err =>{
-        setLoading(false);
-        setPurchase(false);
-        console.log(err);
-    });
+    // setLoading(true);
+    // const data = {
+    //     burgerElements, totalPrice
+    // }
+    // axios.post('/orders.json', data).then((res)=> {
+    //     setLoading(false);
+    //     setPurchase(false);        
+    //     console.log(res)
+    // }).catch(err =>{
+    //     setLoading(false);
+    //     setPurchase(false);
+    //     console.log(err);
+    // });
+    props.history.push('/checkout')
 }
 const addElementToBurger = (type) => {
     const qty = burgerElements[type];
@@ -88,9 +89,9 @@ if(burgerElements){
    );
    contentOrder = <Content burgerElements={burgerElements} totalPrice={totalPrice} cancelClick={closeModal} continueClick={continueOrder} />;
 }
-if (loading) {
-    contentOrder = <Spinner />
-}
+// if (loading) {
+//     contentOrder = <Spinner />
+// }
     return (
         <>
             {burgers}

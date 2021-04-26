@@ -17,12 +17,19 @@ $tex-color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        li{
-            list-style: none;
+       
+        .navLink {
+            text-decoration: none;
             margin: 0 20px;
+            color: #fff;
+        
+            &:active, .selected{
+                color: aqua;
+            }
         }
+       
     }
+   
 }
 @media screen and (max-width: 1024px){
     
@@ -37,7 +44,7 @@ $tex-color: #fff;
             width: 40px;
         }
         .navbar-item {
-            li{
+            .navLink {
                 margin: 0 8px;
                 font-size: 15px;
             }
@@ -52,7 +59,7 @@ $tex-color: #fff;
             width: 40px;
         }
         .navbar-item {
-            li{
+            .navLink {
                 margin: 0 5px;
                 font-size: 15px;
             }
