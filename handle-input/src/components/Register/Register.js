@@ -1,78 +1,86 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
+import {isEmail, isEmpty} from 'validator';
 import './register.css'
 
-const Register = () => {
-    const [formData, setFormData] = useState({
-        isAgree: false,
-        gender: '',
-        username: '',
-        email: '',
-        phone: '',
-        role: 'user',   
+export default class Register extends Component {
+
+    constructor(props) {
+    super(props);
+    this.state = {
+      fullName: null,
+      email: null,
+      password: null,
+      errors: {
+        fullName: 'Full Name must be required!',
+        email: 'Email is not valid!',
+        password: 'Password must be 6 characters long!',
+      }
+    };
+  }
+
+  handleChange = (event) => {
+    event.preventDefault();
+    const { name, value } = event.target;
+    let errors = this.state.errors;
+    switch (name) {
+      case 'fullName': 
+        errors.fullName = isEmpty(value) ? 'Full Name must be requied!' : '';
+        break;
+      case 'email': 
+        errors.email = isEmail(value) ? '' : 'Email is not valid!';
+        break;
+      case 'password': 
+        errors.password = value.length < 6 ? 'Password must be 6 characters long!' : '';
+        break;
+      default:
+        break;
+    }
+
+    this.setState({
+        [name]: value,
+        errors
     });
-    const handleChange = (e) => {
-        const target = e.target;
-        const name = target.name;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
-        console.log(name, value);
-        setFormData({
-            ...formData,
-            [name]: value
-        })
-    }
-    const handleSubmit = (e) => {
-        e.preventDefault();
+  }
 
-    }
+  handleSubmit = (event) => {
+    event.preventDefault();
+    const validateForm = (errors) => {
+        let valid = true;
+        Object.values(errors).map(val => val.length > 0 && (valid = false));
+        return valid;
+      }
+     validateForm(this.state.errors) ? alert('Form is Valid') : alert('Form is Invalid');
+  }
 
+  render() {
+    const {errors} = this.state;
     return (
-        <div className='Register-form'>
-            <h1>Register User</h1>
-            <form>
+      <div className='Register-form'>
+          <h2>Create Account</h2>
+          <form onSubmit={this.handleSubmit} noValidate>
             <div className='form-control'>
-                <label> Username </label>
-                <input type="text" name="username" onChange={handleChange} />
+              <label htmlFor="fullName">Full Name</label>
+              <input type='text' name='fullName' onChange={this.handleChange} noValidate />
             </div>
+              {errors.fullName.length > 0 && 
+                <div className='error'>{errors.fullName}</div>}
             <div className='form-control'>
-                <label> Email </label>
-                <input type="email" name="email" onChange={handleChange} />
+              <label htmlFor="email">Email</label>
+              <input type='email' name='email' onChange={this.handleChange}  />
             </div>
+              {errors.email.length > 0 && 
+                <div className='error'>{errors.email}</div>}
             <div className='form-control'>
-                <label>Phone</label>
-                <input type="number" name="phone" onChange={handleChange} />
+              <label htmlFor="password">Password</label>
+              <input type='password' name='password' onChange={this.handleChange} noValidate />
             </div>
-            <div className='form-select'>
-                <label>Role</label>
-                <select onChange={handleChange} value={formData.role} name='role'>
-                    <option value="admin" >Admin</option>
-                    <option value="user" >User</option>
-                </select>
+              {errors.password.length > 0 && 
+                <div className='error'>{errors.password}</div>}
+            <div className='submit'>
+              <button type='submit'>Submit</button>
             </div>
-            <div className='form-radio'>
-                <label>Gender</label>
-                <span>Male</span>
-                <input type="radio" name="gender" value='male' onChange={handleChange} checked={formData.gender==='male'}/>
-                <span>Female</span>
-                <input type="radio" name="gender" value='female' onChange={handleChange} checked={formData.gender==='female'} />
-            </div>
-            <div className='form-control'>
-                Password:
-                 <input type="Password"  name="password" onChange={handleChange} />
-            </div>
-              <div className='form-control'>
-                Re-type password:
-                <input type="Password"  name="repassword" onChange={handleChange} />
-              </div>
-              <div className='form-checkbox'>
-                  <input type="checkbox" name="isAgree" id='agree' onChange={handleChange} checked={formData.isAgree}/>
-                  <label htmlFor='agree'>I gree to the Terms of User</label>
-              </div>
-              <div className='btnSubmit'>
-                <input type="button" value="Submit" onSubmit={handleSubmit}/>
-              </div>
-            </form>
-        </div>
-    )
+          </form>
+      </div>
+    );
+  }
 }
-
-export default Register
