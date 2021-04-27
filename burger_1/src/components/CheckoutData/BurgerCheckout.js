@@ -4,8 +4,9 @@ import Burger from '../Burger/Burger';
 const BurgerCheckout = (props) => {
     return (
         <div className={classes.burgerCheckout}>
-            <div style={{ width: "100%", margin: "auto" }}>
+            <div className={classes.burger}>
                 <Burger burgerElements={props.burgerElements} />
+                <p className={classes.totalPrice}>Total Price: ${props.price}</p>
             </div>
         </div>
     )

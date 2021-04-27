@@ -1,24 +1,29 @@
-import React, { useState, useEffect } from 'react'
-import BurgerCheckout from '../../components/CheckoutData/BurgerCheckout'
-import axios from '../../axios'
-const Checkout = (props) => {
-    const [elements, setElements] = useState({
-        salad: 1,
-        bacon: 1,
-        meat: 1,
-        cheese: 1
-    });
-    useEffect(() => {
-        axios.get('/burgerElements.json')
-                .then(res => {setElements(res.data);
-                    console.log(res.data);
-                });
-        },[])
-    return (
-        <div>
-            <BurgerCheckout burgerElements={elements} />
-        </div>
-    )
-}
+import React, { useState, useEffect } from "react";
+import BurgerCheckout from "../../components/CheckoutData/BurgerCheckout";
+import Contact from "../../components/CheckoutData/ContactForm/Contact";
 
-export default Checkout
+const Checkout = (props) => {
+  const [ingredients, setIngredients] = useState({});
+  const [totalPrice, setTotalPrice] = useState(0);
+  useEffect(() => {
+    const data = new URLSearchParams(props.location.search);
+    console.log(data);
+    let ingredients = {};
+    for (let param of data.entries()) {
+      // ['salad', '0'],['','']...
+      ingredients[param[0]] = +param[1];
+    }
+    setIngredients(ingredients);
+    setTotalPrice(props.location.state.totalPrice);
+  }, []);
+  return (
+    <>
+      <div>
+        <BurgerCheckout burgerElements={ingredients} price={totalPrice} />
+        <Contact />
+      </div>
+    </>
+  );
+};
+
+export default Checkout;

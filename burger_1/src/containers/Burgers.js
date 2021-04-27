@@ -5,7 +5,7 @@ import Modal from '../components/Modal/Modal';
 import Content from '../components/Modal/Content/Content';
 import axios from '../axios';
 import Spinner from '../components/Spinner/Spinner';
-
+import qs from 'querystring'
 const Burgers = (props) => {
     
  const TOTALPRICE_DEFAULT = 5;
@@ -22,11 +22,11 @@ const burgerElementPrice={
 };
 
 useEffect(() => {
-axios.get('https://the-burger-react-default-rtdb.firebaseio.com/burgerElements.json')
+axios.get('/burgerElements.json')
         .then(res => {setBurgerElements(res.data);
-            console.log(res.data);
         });
 },[])
+
 const showModal= () => {
     setPurchase(true)
 }
@@ -47,7 +47,15 @@ const continueOrder = () => {
     //     setPurchase(false);
     //     console.log(err);
     // });
-    props.history.push('/checkout')
+    
+    props.history.push({
+        pathname: '/checkout',
+        search: qs.stringify({
+            ...burgerElements,
+            //  total: totalPrice,
+        }),
+        state: {totalPrice: totalPrice}
+    });
 }
 const addElementToBurger = (type) => {
     const qty = burgerElements[type];
