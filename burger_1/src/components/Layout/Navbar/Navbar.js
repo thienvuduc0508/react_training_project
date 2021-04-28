@@ -12,7 +12,7 @@ const Navbar = (props) => {
             </div>
             <div className={classes.navbarItem}>
                 <NavLink className={classes.navLink} activeClassName="selected" to='/'>Burger Builder</NavLink>
-                <NavLink className={classes.navLink} activeClassName="selected" to='/checkout'>Checkout</NavLink>
+                <NavLink className={classes.navLink} activeClassName="selected" to='/'>Checkout</NavLink>
             </div>
         </div>
         </>

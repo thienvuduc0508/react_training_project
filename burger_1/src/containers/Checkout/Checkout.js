@@ -4,7 +4,7 @@ import Contact from "../../components/CheckoutData/ContactForm/Contact";
 
 const Checkout = (props) => {
   const [ingredients, setIngredients] = useState({});
-  const [totalPrice, setTotalPrice] = useState(0);
+  const [totalPrice, setTotalPrice] = useState();
   useEffect(() => {
     const data = new URLSearchParams(props.location.search);
     console.log(data);
@@ -14,13 +14,13 @@ const Checkout = (props) => {
       ingredients[param[0]] = +param[1];
     }
     setIngredients(ingredients);
-    setTotalPrice(props.location.state.totalPrice);
+    setTotalPrice(props.location.state.totalPrice)
   }, []);
   return (
     <>
       <div>
         <BurgerCheckout burgerElements={ingredients} price={totalPrice} />
-        <Contact />
+        <Contact burgerElements={ingredients} price={totalPrice} />
       </div>
     </>
   );
