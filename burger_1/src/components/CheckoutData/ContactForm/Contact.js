@@ -29,14 +29,14 @@ const Contact = (props) => {
                 totalPrice: props.price
             }
             axios.post('/orders.json', {contact, data}).then((res)=> {
-                    console.log(res)
+                    alert('order success')
                 }).catch(err =>{
                     console.log(err);
                 });
             
         }
     })
-
+    
     return (
         <div className={classes.contactForm}>
             <form className={classes.formContact} onSubmit={formik.handleSubmit}>
@@ -68,7 +68,7 @@ const Contact = (props) => {
                     <option value="normal">Normal</option>
                 </select>
                 <div className={classes.btnButton}>
-                    <button className={classes.btnCancel}>Cancel</button>
+                    <button className={classes.btnCancel} onClick={() => {props.history.goBack()}}>Cancel</button>
                     <button type='submit' className={classes.btnComplete}>Complete</button>
                 </div>
                 </div>
