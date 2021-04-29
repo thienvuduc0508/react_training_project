@@ -1,0 +1,8 @@
+.addForm{
+    width: 500px;
+    display: block;
+    margin: 10px auto;
+}
+input {
+    width: 100%;
+}
